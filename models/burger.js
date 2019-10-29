@@ -13,8 +13,10 @@ var burgers = {
         });
     },
 
-    updateOne: function(colVals, condition, callBack) {
-        orm.updateOne("burgers", colVals, condition, function(res) {
+    updateOne: function(objColVals, condition, callBack) {
+        console.log(objColVals);
+        console.log(condition);
+        orm.updateOne("burgers", objColVals, condition, function(res) {
             callBack(res);
         });
     },

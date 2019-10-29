@@ -57,6 +57,8 @@ insertOne: function(table,cols,vals,cb){
 },
 
 updateOne: function(table, objColVals, condition, cb){
+	console.log(objColVals);
+	console.log(condition);
 	var queryString = "UPDATE " + table;
 	queryString += "SET";
 	queryString += objToSql(objColVals);
