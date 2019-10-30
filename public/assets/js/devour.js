@@ -6,7 +6,7 @@ $(".devour").on("click", function(event) {
 
     console.log(devouredstate)
     var devourObj = {
-        devoured: devouredstate
+        devoured: 1
     }
     $.ajax("/burgers/update/" + id, {
         type: "PUT",

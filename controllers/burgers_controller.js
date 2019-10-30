@@ -40,7 +40,7 @@ router.put("/burgers/update/:id", function(req, res) {
     burgers.updateOne({
         "devoured": req.body.devoured
     }, condition, function(burger) {
-       if (burger.changedRows === 0) {
+       if (burger.changedRows == 0) {
            return res.status(404).end();
        } else {
            res.status(200).end();
